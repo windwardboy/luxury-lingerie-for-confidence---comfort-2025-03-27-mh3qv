@@ -3,9 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luxury Lingerie - Confidence & Comfort | Sexy Underneath</title>
     <meta name="description" content="Shop premium lingerie approved by real women. Expert-tested, size-inclusive collection featuring comfortable fits and luxurious materials.">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .transition-all {
+            transition: all 0.3s ease-in-out;
+        }
+        .hover-scale:hover {
+            transform: scale(1.03);
+        }
+        .mobile-menu {
+            transform: translateY(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .mobile-menu.show {
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body class="font-sans antialiased">
     <!-- Announcement Bar -->
@@ -15,25 +39,34 @@
 
     <!-- Header -->
     <header class="sticky top-0 z-50 bg-white shadow-md">
-        <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
-            <div class="flex items-center">
-                <a href="/" class="text-2xl font-bold">Sexy Underneath</a>
-            </div>
-            
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="#" class="text-gray-600 hover:text-black transition-colors duration-300">Shop</a>
-                <a href="#" class="text-gray-600 hover:text-black transition-colors duration-300">Collections</a>
-                <a href="#" class="text-gray-600 hover:text-black transition-colors duration-300">About</a>
-                <a href="#" class="text-gray-600 hover:text-black transition-colors duration-300">Contact</a>
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <a href="https://windwardboy.github.io/luxury-lingerie-for-confidence---comfort-2025-03-27-mh3qv" class="text-2xl font-bold">Sexy Underneath</a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-gray-600 hover:text-black transition-colors duration-300">Features</a>
+                    <a href="#benefits" class="text-gray-600 hover:text-black transition-colors duration-300">Benefits</a>
+                    <a href="#about" class="text-gray-600 hover:text-black transition-colors duration-300">About</a>
+                    <a href="#testimonials" class="text-gray-600 hover:text-black transition-colors duration-300">Testimonials</a>
+                    <a href="#faq" class="text-gray-600 hover:text-black transition-colors duration-300">FAQ</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-button md:hidden" aria-label="Toggle mobile menu">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
             </div>
 
-            <div class="flex items-center space-x-4">
-                <button class="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-colors duration-300">Shop Now</button>
-                <button class="md:hidden">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"/>
-                    </svg>
-                </button>
+            <!-- Mobile Menu -->
+            <div class="mobile-menu hidden md:hidden absolute top-full left-0 w-full bg-white shadow-lg">
+                <div class="flex flex-col p-4 space-y-4">
+                    <a href="#features" class="text-gray-600 hover:text-black transition-colors duration-300">Features</a>
+                    <a href="#benefits" class="text-gray-600 hover:text-black transition-colors duration-300">Benefits</a>
+                    <a href="#about" class="text-gray-600 hover:text-black transition-colors duration-300">About</a>
+                    <a href="#testimonials" class="text-gray-600 hover:text-black transition-colors duration-300">Testimonials</a>
+                    <a href="#faq" class="text-gray-600 hover:text-black transition-colors duration-300">FAQ</a>
+                </div>
             </div>
         </nav>
     </header>
@@ -60,135 +93,248 @@
     </section>
 
     <!-- Features Section -->
-    <section class="py-24 bg-white">
+    <section id="features" class="py-24 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Why Choose Us</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <!-- Feature 1 -->
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <!-- Feature cards with hover effects -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                     <div class="w-16 h-16 bg-black rounded-full flex items-center justify-center mb-6 mx-auto">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                     </div>
                     <h3 class="text-xl font-bold text-center mb-4">Expert-Tested</h3>
-                    <p class="text-gray-600 text-center">Every piece is tested and approved by lingerie experts for quality and comfort.</p>
+                    <p class="text-gray-600 text-center">Every piece is thoroughly tested and approved by lingerie experts for exceptional quality, comfort, and durability.</p>
                 </div>
 
-                <!-- Feature 2 -->
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                     <div class="w-16 h-16 bg-black rounded-full flex items-center justify-center mb-6 mx-auto">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                     </div>
                     <h3 class="text-xl font-bold text-center mb-4">Budget to Luxury</h3>
-                    <p class="text-gray-600 text-center">Find your perfect piece across our range of price points.</p>
+                    <p class="text-gray-600 text-center">From affordable essentials to premium luxury pieces, find your perfect match across our carefully curated price ranges.</p>
                 </div>
 
-                <!-- Feature 3 -->
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                     <div class="w-16 h-16 bg-black rounded-full flex items-center justify-center mb-6 mx-auto">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
                         </svg>
                     </div>
                     <h3 class="text-xl font-bold text-center mb-4">Size-Inclusive</h3>
-                    <p class="text-gray-600 text-center">Beautiful lingerie for every body type and size.</p>
+                    <p class="text-gray-600 text-center">Celebrating every body with our extensive size range, ensuring everyone can find their perfect fit and feel confident.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Benefits Sections -->
-    <!-- Benefit 1 -->
-    <section class="py-24 bg-white">
-        <div class="container mx-auto px-4">
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-24 bg-white">
+        <!-- Benefit 1 -->
+        <div class="container mx-auto px-4 mb-24">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div class="order-2 md:order-1">
-                    <h2 class="text-3xl font-bold mb-6">No Itchy Lace</h2>
-                    <p class="text-gray-600 mb-8">Experience supreme comfort with our carefully selected materials that feel soft against your skin.</p>
-                    <a href="https://sexyunderneath.com" class="inline-block bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-colors duration-300">Shop Comfort Collection</a>
+                    <h2 class="text-3xl font-bold mb-6">Premium Comfort Guarantee</h2>
+                    <p class="text-gray-600 mb-8">Experience unparalleled comfort with our revolutionary soft-touch materials. Our signature fabric blend ensures zero irritation and all-day wearability, while maintaining its shape and support. Each piece is crafted with breathable, hypoallergenic materials that feel like a second skin.</p>
+                    <a href="#" class="inline-block bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-all duration-300 hover:scale-105">Shop Comfort Collection</a>
                 </div>
                 <div class="order-1 md:order-2">
                     <img src="https://images.unsplash.com/photo-1556740714-a8395b3bf30f?w=800&h=600&fit=crop&q=80" 
                          alt="Comfortable Lingerie" 
-                         class="rounded-lg shadow-xl w-full">
+                         class="rounded-lg shadow-xl w-full hover:scale-105 transition-all duration-300">
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Benefit 2 -->
-    <section class="py-24 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <img src="https://images.unsplash.com/photo-1502982720700-bfff97f2ecac?w=800&h=600&fit=crop&q=80" 
-                         alt="Flattering Fits" 
-                         class="rounded-lg shadow-xl w-full">
-                </div>
-                <div>
-                    <h2 class="text-3xl font-bold mb-6">Flattering Fits</h2>
-                    <p class="text-gray-600 mb-8">Designed to enhance your natural beauty with perfectly tailored cuts and styles.</p>
-                    <a href="https://sexyunderneath.com" class="inline-block bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-colors duration-300">Find Your Fit</a>
+        <!-- Benefit 2 -->
+        <div class="bg-gray-50 py-24">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1502982720700-bfff97f2ecac?w=800&h=600&fit=crop&q=80" 
+                             alt="Flattering Fits" 
+                             class="rounded-lg shadow-xl w-full hover:scale-105 transition-all duration-300">
+                    </div>
+                    <div>
+                        <h2 class="text-3xl font-bold mb-6">Expert Fit Technology</h2>
+                        <p class="text-gray-600 mb-8">Our innovative sizing system uses advanced body mapping technology to ensure the perfect fit for every body type. Each design is carefully engineered with strategic support panels and flexible materials that move with you, creating a flattering silhouette that boosts confidence.</p>
+                        <a href="#" class="inline-block bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-all duration-300 hover:scale-105">Find Your Perfect Fit</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Benefit 3 -->
-    <section class="py-24 bg-white">
-        <div class="container mx-auto px-4">
+        <!-- Benefit 3 -->
+        <div class="container mx-auto px-4 mt-24">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div class="order-2 md:order-1">
-                    <h2 class="text-3xl font-bold mb-6">Confidence that Lasts</h2>
-                    <p class="text-gray-600 mb-8">Premium quality lingerie that maintains its shape and comfort wear after wear.</p>
-                    <a href="https://sexyunderneath.com" class="inline-block bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-colors duration-300">Shop Premium Collection</a>
+                    <h2 class="text-3xl font-bold mb-6">Lasting Quality Promise</h2>
+                    <p class="text-gray-600 mb-8">Invest in lingerie that's built to last. Our premium collections undergo rigorous quality testing, ensuring color fastness, shape retention, and durability through countless washes. Each piece is crafted with reinforced stitching and high-grade materials that maintain their beauty and functionality wear after wear.</p>
+                    <a href="#" class="inline-block bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-all duration-300 hover:scale-105">Explore Premium Collection</a>
                 </div>
                 <div class="order-1 md:order-2">
                     <img src="https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea?w=800&h=600&fit=crop&q=80" 
-                         alt="Confidence in Lingerie" 
-                         class="rounded-lg shadow-xl w-full">
+                         alt="Premium Quality Lingerie" 
+                         class="rounded-lg shadow-xl w-full hover:scale-105 transition-all duration-300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Our Story</h2>
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-gray-600 mb-8">Founded in 2018 by a team of fashion industry veterans, Sexy Underneath was born from a simple observation: luxury lingerie shouldn't compromise on comfort. Our founders spent years in traditional lingerie design before deciding to revolutionize the industry with a new approach that prioritizes both style and wearability.</p>
+                <p class="text-gray-600">Our mission is to empower every woman with lingerie that makes them feel confident and comfortable in their own skin. We believe in sustainable production, inclusive sizing, and creating pieces that celebrate the natural beauty of all body types. Our core values of quality, comfort, and confidence guide every decision we make.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">What Our Customers Say</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Finally found lingerie that fits perfectly! The size guide was spot-on, and the comfort is unmatched. I've been wearing their pieces for daily use for 6 months now."</p>
+                    <p class="font-bold">Sarah M.</p>
+                    <p class="text-sm text-gray-500">Fashion Blogger</p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"The quality is exceptional. I've washed my sets multiple times and they still look brand new. Worth every penny for the comfort and durability."</p>
+                    <p class="font-bold">Jennifer R.</p>
+                    <p class="text-sm text-gray-500">Business Executive</p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"As someone with sensitive skin, I've always struggled with lingerie. These pieces are truly hypoallergenic and so comfortable. No more irritation!"</p>
+                    <p class="font-bold">Lisa T.</p>
+                    <p class="text-sm text-gray-500">Wellness Coach</p>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"The customer service is outstanding. They helped me find the perfect size and style. I've never felt more confident in lingerie."</p>
+                    <p class="font-bold">Maria C.</p>
+                    <p class="text-sm text-gray-500">Fitness Instructor</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FAQ Section -->
-    <section class="py-24 bg-gray-50">
+    <section id="faq" class="py-24 bg-gray-50">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Frequently Asked Questions</h2>
             
             <div class="max-w-3xl mx-auto space-y-6">
-                <div class="bg-white rounded-lg shadow-md">
+                <!-- FAQ 1 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
                     <button class="w-full px-6 py-4 text-left font-semibold flex justify-between items-center">
                         <span>How do I find my perfect size?</span>
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"/>
                         </svg>
                     </button>
+                    <div class="px-6 pb-4 hidden">
+                        <p class="text-gray-600">Use our detailed size guide and measuring instructions to find your perfect fit. For personalized assistance, our fit experts are available via chat or email.</p>
+                    </div>
                 </div>
 
-                <div class="bg-white rounded-lg shadow-md">
+                <!-- FAQ 2 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
                     <button class="w-full px-6 py-4 text-left font-semibold flex justify-between items-center">
                         <span>What's your return policy?</span>
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"/>
                         </svg>
                     </button>
+                    <div class="px-6 pb-4 hidden">
+                        <p class="text-gray-600">We offer free returns within 30 days of purchase. Items must be unworn with original tags attached. Exchanges are also available.</p>
+                    </div>
                 </div>
 
-                <div class="bg-white rounded-lg shadow-md">
+                <!-- FAQ 3 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
                     <button class="w-full px-6 py-4 text-left font-semibold flex justify-between items-center">
                         <span>How do I care for my lingerie?</span>
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"/>
                         </svg>
                     </button>
+                    <div class="px-6 pb-4 hidden">
+                        <p class="text-gray-600">Hand wash in cold water with mild detergent. Lay flat to dry. Avoid machine washing and dryers to maintain shape and quality.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                    <button class="w-full px-6 py-4 text-left font-semibold flex justify-between items-center">
+                        <span>Do you ship internationally?</span>
+                        <svg class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="px-6 pb-4 hidden">
+                        <p class="text-gray-600">Yes, we ship worldwide! Delivery times vary by location. Free shipping on orders over $100. Track your order easily through our system.</p>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="relative py-24 bg-black text-white">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=1600&h=900&fit=crop&q=80" 
+                 alt="Luxury Lingerie Background" 
+                 class="w-full h-full object-cover opacity-20">
+        </div>
+        <div class="relative container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8">Experience Luxury Comfort Today</h2>
+            <p class="text-xl mb-12 max-w-2xl mx-auto">Join thousands of satisfied customers who have discovered their perfect fit. Shop now and enjoy free shipping on your first order.</p>
+            <a href="#" class="inline-block bg-white text-black px-12 py-6 rounded-full text-xl font-bold hover:bg-gray-200 transform hover:scale-105 transition-all duration-300">
+                Shop the Collection
+            </a>
         </div>
     </section>
 
@@ -199,41 +345,47 @@
                 <div>
                     <h3 class="text-xl font-bold mb-4">Sexy Underneath</h3>
                     <p class="text-gray-400">Luxury lingerie for every body.</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                    </div>
                 </div>
                 
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Shop</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">About</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Contact</a></li>
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition-colors duration-300">Features</a></li>
+                        <li><a href="#benefits" class="text-gray-400 hover:text-white transition-colors duration-300">Benefits</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors duration-300">About Us</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition-colors duration-300">Testimonials</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-white transition-colors duration-300">FAQ</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Customer Service</h4>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Shipping</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Returns</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Size Guide</a></li>
+                        <li><a href="https://windwardboy.github.io/luxury-lingerie-for-confidence---comfort-2025-03-27-mh3qv/shipping.html" class="text-gray-400 hover:text-white transition-colors duration-300">Shipping</a></li>
+                        <li><a href="https://windwardboy.github.io/luxury-lingerie-for-confidence---comfort-2025-03-27-mh3qv/returns.html" class="text-gray-400 hover:text-white transition-colors duration-300">Returns</a></li>
+                        <li><a href="https://windwardboy.github.io/luxury-lingerie-for-confidence---comfort-2025-03-27-mh3qv/size-guide.html" class="text-gray-400 hover:text-white transition-colors duration-300">Size Guide</a></li>
+                        <li><a href="https://windwardboy.github.io/luxury-lingerie-for-confidence---comfort-2025-03-27-mh3qv/terms.html" class="text-gray-400 hover:text-white transition-colors duration-300">Terms of Service</a></li>
+                        <li><a href="https://windwardboy.github.io/luxury-lingerie-for-confidence---comfort-2025-03-27-mh3qv/privacy.html" class="text-gray-400 hover:text-white transition-colors duration-300">Privacy Policy</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
-                    <p class="text-gray-400 mb-2">info@sexyunderneath.com</p>
-                    <div class="flex space-x-4 mt-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                            </svg>
-                        </a>
-                    </div>
+                    <p class="text-gray-400 mb-2">Email: support@sexyunderneath.com</p>
+                    <p class="text-gray-400 mb-2">Phone: 1-800-SEXY-NOW</p>
+                    <p class="text-gray-400 mb-4">Hours: Mon-Fri 9am-6pm EST</p>
+                    <a href="https://windwardboy.github.io/luxury-lingerie-for-confidence---comfort-2025-03-27-mh3qv/blog.html" class="text-gray-400 hover:text-white transition-colors duration-300">Visit our Blog</a>
                 </div>
             </div>
 
@@ -242,5 +394,54 @@
             </div>
         </div>
     </footer>
+
+    <!-- Mobile Menu JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('header nav .mobile-menu-button');
+            const mobileMenu = document.querySelector('header nav .mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
+
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+
+    <!-- FAQ Toggle JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqButtons = document.querySelectorAll('#faq button');
+            
+            faqButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const content = button.nextElementSibling;
+                    const icon = button.querySelector('svg');
+                    
+                    content.classList.toggle('hidden');
+                    icon.classList.toggle('rotate-180');
+                });
+            });
+        });
+    </script>
+</body>
 </body>
 </html>
